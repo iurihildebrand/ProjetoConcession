@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class FinanciamentoAppModificado extends JFrame {
+public class FinanciamentoVeiculoApp extends JFrame {
 
     private static final double TAXA_JUROS = 0.10; // 10% fixo
     private static final Color COR_PRIMARIA = new Color(30, 60, 114);
@@ -23,7 +23,7 @@ public class FinanciamentoAppModificado extends JFrame {
     // Componentes de Resultado
     private JLabel lblValorFinanciado, lblValorParcela, lblTotalPagar;
 
-    public FinanciamentoAppModificado() {
+    public FinanciamentoVeiculoApp() {
         super("Simulador de Veículos Premium");
         configurarJanelaPrincipal();
         inicializarComponentes();
@@ -59,7 +59,7 @@ public class FinanciamentoAppModificado extends JFrame {
 
         txtQuilometragem = new JTextField();
         txtProprietarios = new JTextField();
-        
+
         chkPossuiEntrada = new JCheckBox("Desejo dar um valor de entrada");
         chkPossuiEntrada.setBackground(Color.WHITE);
         txtEntrada = new JTextField();
@@ -329,7 +329,7 @@ public class FinanciamentoAppModificado extends JFrame {
         } catch (Exception ignored) {}
 
         SwingUtilities.invokeLater(() -> {
-            new FinanciamentoAppModificado().setVisible(true);
+            new FinanciamentoVeiculoApp().setVisible(true);
         });
     }
 }
